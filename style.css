@@ -1,0 +1,26 @@
+body{
+    background-color: #eaeaea;
+    /*
+    background-color: #252525;
+    */
+
+}
+
+h1{
+    color: #8bacbd;
+    
+    /*
+    color: #fa9581;
+    */
+    
+    /*
+    colors for dark theme (vibrant)
+
+    color: #ff6d17; 
+    color: #3297fb;
+    */
+}
+
+p{
+    color: #252525;
+}
