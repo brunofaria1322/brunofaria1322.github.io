@@ -1,5 +1,5 @@
 body{
-    background-color: #eaeaea;
+    background-color: #252525;
     /*
     background-color: #252525;
     */
@@ -7,7 +7,7 @@ body{
 }
 
 h1{
-    color: #8bacbd;
+    color: #ffffff;
     
     /*
     color: #fa9581;
@@ -22,5 +22,10 @@ h1{
 }
 
 p{
-    color: #252525;
+    color: #ffffff;
+}
+
+section{
+    width: 100%;
+    height: 100%;
 }
