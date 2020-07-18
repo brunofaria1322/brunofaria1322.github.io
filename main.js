@@ -7,17 +7,32 @@
 
 function main(){
 
-    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    let secs = ["Home","About", "Skills", "Work", "Contacts"];
+    let current_sec=0;
     let scrolling= false;
 
-    function scroll( down){
-        window.scrollBy(0, down? -vh : vh);
+    function scroll(down){
+        if (down){
+            if (current_sec--<0){               //if first section
+                current_sec=0;
+                return;
+            }
+        }
+        else{
+            if (current_sec++>secs.length-1){   //if last section
+                current_sec=secs.length-1;
+                return;
+            }
+        }
+        var element_to_scroll_to = document.getElementById(secs[current_sec]);
+        element_to_scroll_to.scrollIntoView({behavior: 'smooth' });
+        //location.hash = "#" + secs[current_sec];
     }
 
     function scrollHandler(ev) {
         console.log(ev.deltaY);
         if (scrolling) {
-            if (!ev.deltaY){    //scrolling ends with delta = 0 or -0 / prevents from double scrolling
+            if (!ev.deltaY){    //scrolling starts with deltaY = 0 or -0 / prevents from double scrolling
                 
                 console.log("pipi parou");
                 scrolling = false;
