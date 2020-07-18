@@ -1,7 +1,9 @@
 * {
     margin:0;
+    padding: 0;
 }
 
+/*GERAL*/
 body{
     font-size: 20px;
     overflow: hidden;
@@ -14,6 +16,24 @@ h1{
     font-size: 1.5em;
 }
 
+ul{
+    width: 100%;
+    text-align: center;
+}
+
+ul li{
+    display: inline-flex;
+}
+
+li{ 
+    display: flex;
+    width: 16%;
+}
+
+li a{
+    margin: auto;
+}
+
 p{
     padding: 1em;
     color: #ffffff;
@@ -21,9 +41,30 @@ p{
 }
 
 section, header, footer{
+    font-size: 20px;
     margin: 0;
     width: 100%;
     height: 100vh;
+}
+
+
+.centered{
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+
+/*HOME*/
+#Home{
+    background-color: #04c2c9;
+    text-align: center;
+}
+
+/*ABOUT*/
+#About{
+    background-color: #7f32e2;
+    display: flex;
 }
 
 img{
@@ -32,7 +73,6 @@ img{
     width: 90%;
     top: 50%;
     transform: translate(0, -50%);
-    
 }
 
 #photo{
@@ -48,34 +88,36 @@ img{
     text-align: right;
 }
 
-#Home{
-    background-color: #04c2c9;
-    text-align: center;
-}
-
-#About{
-    background-color: #7f32e2;
-    display: flex;
-}
-
+/*SKILLS*/
 #Skills{
     background-color: #e29470;
 }
 
+/*WORK*/
 #Work{
     background-color: #66A7D5;
 }
 
+/*CONTACTS*/
 #Contacts{
     background-color: #252934;
+    text-align: center;
 }
 
-.centered{
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
+
+svg{
+    fill: white;
+    max-width: 100px;
+    width: 50%;
 }
 
+#Contact_Box{
+    height: 60%;
+}
+
+/*SIZING*/
+
+/*Phone?*/
 @media screen and (max-width: 500px) {
     #About{
         display: block;
