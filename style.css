@@ -34,6 +34,10 @@ li a{
     margin: auto;
 }
 
+li a:hover{
+    background-color: #aaaacc;
+}
+
 p{
     padding: 1em;
     color: #ffffff;
@@ -148,4 +152,33 @@ svg{
         top: 0;
         transform: translate(0, 0);
     }
+}
+    
+@font-face { font-family: a; src: url("fonts/BioRhyme-ExtraBold.ttf"); } 
+@font-face { font-family: b; src: url("fonts/Lato-Black.ttf"); } 
+@font-face { font-family: c; src: url("fonts/Montserrat-Black.ttf"); }     
+@font-face { font-family: d; src: url("fonts/NotoSans-Bold.ttf"); } 
+@font-face { font-family: e; src: url("fonts/Oswald-Bold.ttf"); } 
+@font-face { font-family: f; src: url("fonts/Rubik-Black.ttf"); }     
+@font-face { font-family: g; src: url("fonts/Rubik-Bold.ttf"); } 
+@font-face { font-family: h; src: url("fonts/Vollkorn-Black.ttf"); } 
+
+h1 {
+	animation-name: change;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+    font-family: 1;
+}
+ 
+@keyframes change{
+    0%      {font-family: a;}
+    12.5%   {font-family: b;}
+    25%     {font-family: c;}
+    37.5%   {font-family: d;}
+    50%     {font-family: e;}
+    62.5%   {font-family: f;}
+    75%     {font-family: g;}
+    87.5%   {font-family: h;}
+    100%    {font-family: a;}
+
 }
