@@ -13,12 +13,13 @@ h1{
     padding: 10px;
     padding-top: 30px;
     color: #ffffff;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 ul{
     width: 100%;
     text-align: center;
+    display: inline-flex;
 }
 
 ul li{
@@ -27,7 +28,7 @@ ul li{
 
 li{ 
     display: flex;
-    width: 16%;
+    width: 32%;
 }
 
 li a{
@@ -108,6 +109,9 @@ img{
     text-align: center;
 }
 
+footer p{
+    text-align: center;
+}
 
 svg{
     fill: white;
@@ -119,7 +123,23 @@ svg{
     height: 60%;
 }
 
+.contacts_line{
+    width: 50%;
+}
+
 /*SIZING*/
+
+/*Smaller*/
+@media screen and (max-width: 950px) {
+    .contacts_line{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    ul{
+        display: block;
+    }
+}
 
 /*Phone?*/
 @media screen and (max-width: 500px) {
@@ -173,7 +193,7 @@ h1 {
 @keyframes change{
     0%      {font-family: a;}
     12.5%   {font-family: b;}
-    25%     {font-family: c;}
+    25%      {font-family: c;}
     37.5%   {font-family: d;}
     50%     {font-family: e;}
     62.5%   {font-family: f;}

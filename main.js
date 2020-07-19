@@ -27,14 +27,14 @@ function main(){
                 return;
             }
         }
-        secs[current_sec].scrollIntoView({behavior: 'smooth' });
+        
+        console.log(secs[current_sec]);
+        secs[current_sec].scrollIntoView({block: 'start', behavior: 'smooth' });
     }
 
     function scrollHandler(ev) {
         if (scrolling) {
             if (!ev.deltaY){    //scrolling starts with deltaY = 0 or -0 / prevents from double scrolling
-                
-                console.log("pipi parou");
                 scrolling = false;
             }
         }
