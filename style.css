@@ -4,9 +4,15 @@
 }
 
 /*GERAL*/
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
 body{
     font-size: 20px;
-    overflow: hidden;
+    
 }
 
 h1{ 
@@ -50,6 +56,7 @@ section, header, footer{
     margin: 0;
     width: 100%;
     height: 100vh;
+    scroll-snap-align: center;
 }
 
 
@@ -142,7 +149,7 @@ svg{
 }
 
 /*Phone?*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     #About{
         display: block;
     }
