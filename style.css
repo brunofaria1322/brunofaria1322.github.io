@@ -64,6 +64,10 @@ section, footer{
     scroll-snap-align: start;
 }
 
+.transition{
+    height: 50vh;
+    width: 100%;
+}
 
 .centered{
     position: relative;
@@ -76,6 +80,11 @@ section, footer{
 #Home{
     background-color: #04c2c9;
     text-align: center;
+}
+
+#Home-About{
+    background-color: #04c2c9;
+    background-image: linear-gradient(180deg, #04c2c9 0%, #7f32e2 100%);
 }
 
 /*ABOUT*/
@@ -105,14 +114,29 @@ img{
     text-align: right;
 }
 
+#About-Skills{
+    background-color: #7f32e2;
+    background-image: linear-gradient(180deg, #7f32e2 0%, #e29470 100%);
+}
+
 /*SKILLS*/
 #Skills{
     background-color: #e29470;
 }
 
+#Skills-Work{
+    background-color: #e29470;
+    background-image: linear-gradient(180deg, #e29470 0%, #66A7D5 100%);
+}
+
 /*WORK*/
 #Work{
     background-color: #66A7D5;
+}
+
+#Work-Contacts{
+    background-color: #66A7D5;
+    background-image: linear-gradient(180deg, #66A7D5 0%, #252934 100%);
 }
 
 /*CONTACTS*/
