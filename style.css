@@ -39,6 +39,7 @@ li{
 
 li a{
     margin: auto;
+    color: #cccccc;
 }
 
 li a:hover{
