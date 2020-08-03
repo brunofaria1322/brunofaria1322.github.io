@@ -2,3 +2,53 @@
     margin:0;
     padding: 0;
 }
+
+body{
+    background-color: var(--background);
+    display: flex;
+}
+
+@font-face { font-family: h1; src: url("fonts/Archive-Regular.ttf"); } 
+
+h1{
+    color: var(--color-1);
+    font-size: 70px;
+    font-family: h1;
+    font-weight: bold;
+}
+/* Lateral Nav*/
+
+nav{
+    position: fixed;
+    width: 70px;
+    height: 100vh;
+    background-color: rgba(255,255,255,0.05);
+}
+
+nav a{
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255,255,255,0.1);
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+nav a:first-child{
+    margin-top: 45px;
+}
+
+nav a:last-child{
+    position: absolute;
+    left:12.5px;
+    bottom: 30px;
+}
+
+/*Content side*/
+.content{
+    width: 100%;
+    margin-left: 250px;
+    margin-top: 110px;
+}
+
