@@ -1,0 +1,21 @@
+ #about-sec{
+    display: flex;
+    background-color:rgba(0, 0, 0, 0.1);
+ }
+
+ img{
+    margin: auto;
+    height: 70%;
+ }
+
+ #text-box{
+    height: 70%;
+    width: 50%;
+    margin: auto;
+    display: flex;
+ }
+ 
+ p{
+    text-align: justify;
+    margin: auto;
+ }
