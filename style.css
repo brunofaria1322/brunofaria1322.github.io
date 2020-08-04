@@ -8,7 +8,8 @@ body{
     display: flex;
 }
 
-@font-face { font-family: h1; src: url("fonts/Archive-Regular.ttf"); } 
+@font-face { font-family: h1; src: url("fonts/Archive-Regular.ttf"); }
+@font-face { font-family: p; src: url("fonts/Archivo-Regular.ttf"); }
 
 h1{
     color: var(--color-1);
@@ -16,6 +17,12 @@ h1{
     font-family: h1;
     font-weight: bold;
 }
+
+p{
+    color: white;
+    font-family: p;
+}
+
 /* Lateral Nav*/
 
 nav{
@@ -41,14 +48,23 @@ nav a:first-child{
 
 nav a:last-child{
     position: absolute;
-    left:12.5px;
+    width: 100%;
+    background-color: rgba(var(--color-2),0.3);
+    border-radius:0;
     bottom: 30px;
 }
 
 /*Content side*/
 .content{
-    width: 100%;
+    width: 70%;
     margin-left: 15%;
     margin-top: 110px;
+}
+
+.selected{
+    border-radius:0;
+    width: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(50deg, var(--color-1) 0%, transparent 75%);
 }
 
