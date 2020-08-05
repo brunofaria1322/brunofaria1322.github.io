@@ -1,7 +1,6 @@
-#about-sec{
+#work-sec{
    display: flex;
-   background-color:rgba(0, 0, 0, 0.1);
-   height: 60%;
+   background-color:rgba(var(--color-2), 0.1);
 }
 
 img{
