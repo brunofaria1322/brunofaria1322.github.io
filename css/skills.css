@@ -39,13 +39,18 @@
    border-radius: 0px 0px 30px 30px;
    height: 15%;
 }
+
+#skills-sec > div:last-child > .text-box {
+   width: auto;
+   margin: auto;
+}
  
 p{
    text-align: justify;
    margin: auto;
 }
 
-img{
+div img{
    max-height: 70%;
    max-width: 20%;
    margin: auto;

@@ -36,17 +36,21 @@ nav{
     position: fixed;
     width: 70px;
     height: 100vh;
-    background-color: rgba(255,255,255,0.05);
 }
 
 nav a{
     width: 45px;
     height: 45px;
     background-color: rgba(255,255,255,0.1);
-    display: block;
     margin: auto;
     margin-top: 10px;
     border-radius: 50%;
+    display: flex;
+}
+
+nav a img{
+    height: 70%;
+    margin: auto;
 }
 
 nav a:first-child{
@@ -56,9 +60,10 @@ nav a:first-child{
 nav a:last-child{
     position: absolute;
     width: 100%;
-    background-color: rgba(var(--color-2),0.3);
+    background-color: rgb(var(--color-2));
     border-radius:0;
     bottom: 30px;
+    border-radius: 0px 30px 30px 0px;
 }
 
 /*Content side*/
@@ -72,8 +77,8 @@ nav a:last-child{
 .selected{
     border-radius:0;
     width: 100%;
-    background-color: transparent;
-    background-image: linear-gradient(50deg, rgb(var(--color-1)) 0%, transparent 75%);
+    background-color: rgb(var(--color-1));
+    border-radius: 0px 30px 30px 0px;
 }
 
 .bordered-box{
