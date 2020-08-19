@@ -1,5 +1,10 @@
+h1{
+    font-size: 100px;
+}
+
 p{
     margin-top: 10%;
+    font-size: 25px;
 }
 
 svg{
