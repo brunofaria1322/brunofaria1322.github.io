@@ -12,18 +12,56 @@ nav{
     top: 50%;
     right: 50px;
     transform: translate(0px, -50%);
-
-    display: block;
 }
 
-nav a{
+nav li{
     display: flex;
+    margin: 20px auto;
+}
+
+li a{
+    display: block;
     height: 15px;
     width: 15px;
     background-color: #F2A4A0;
     border-radius: 50%;
-    margin: 20px 10px;
+    
+    margin: 5px 0px 5px 0px;
+
+    
+    transition: 0.5s;
+    transition-timing-function: ease;
 }
+
+li p{
+
+    display: block;
+
+    font-size: 0em;
+    font-weight: lighter;
+    color: transparent;
+    
+    text-align: right;
+    margin: auto;
+}
+
+li:hover a{
+
+    margin-left: 15px;
+    height: 20px;
+    width: 20px;
+}
+
+li:hover p{
+    transition: 0.5s;
+    transition-timing-function: ease;
+
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+}
+
+
 
 /*Sections*/
 section{
