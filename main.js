@@ -6,5 +6,5 @@
 
 
 function main(){
-    themes=[["#273241", [53,232,198], [80, 131, 198]], ["#364F6B", [252,81,133], [67, 221, 230]]];
+    console.log(window.screen.width,window.screen.height);
 }

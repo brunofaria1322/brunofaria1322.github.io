@@ -2,3 +2,78 @@
     margin:0;
     padding: 0;
 }
+
+
+
+
+/*Nav side bar*/
+nav{
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    transform: translate(0px, -50%);
+
+    display: block;
+}
+
+nav a{
+    display: flex;
+    height: 15px;
+    width: 15px;
+    background-color: #F2A4A0;
+    border-radius: 50%;
+    margin: 20px 10px;
+}
+
+/*Sections*/
+section{
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/*Home Section*/
+
+#Home{
+    background-color: #2B97A4;
+}
+
+/*About Section*/
+
+#About{
+    background-color: #ffffff;
+}
+
+/*Experience-Education Section*/
+
+#Experience{
+    background-color: #F87A7B;
+}
+
+/*Skills Section*/
+
+#Skills{
+    background-color: #D7C8C5;
+}
+
+/*Work Section*/
+
+#Work{
+    background-color: #B0D6D7;
+}
+
+/*Contacts Section*/
+
+#Contacts{
+    background-color: #596466;
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 600px) {
+    
+}
