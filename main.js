@@ -6,8 +6,8 @@
 
 
 function main(){
-    var navColors = [["#F2A4A0", "#F87A7B", "#FFFFFF"], ["#B0D6D7", "#2B97A4", "#596466"]]
-    var defaultNav = true;
+    var navColors = [["#F2A4A0", "#F87A7B", "#FFFFFF"], ["#B0D6D7", "#2B97A4", "#373d3e"]]
+    var defaultNav = true;  //true if pink / false if green
 
     function changeNav(colors){
         document.documentElement.style.setProperty('--nav-normal', colors[0]);
@@ -15,56 +15,48 @@ function main(){
         document.documentElement.style.setProperty('--nav-text', colors[2]);
     }
 
+    var lastSec = 1;    //number of last section (for unselecting)
+    var currentSec = 1; //number of current section
     
-    /*
-    var scrollHandler = function (){
-
-    }
-    */
-
-
-    //  in viewport
-
-    let allElements = document.getElementsByTagName("section");
+    var dots = document.getElementsByClassName('dots');
+    var sections = document.getElementsByTagName("section");
     let windowHeight = window.innerHeight;
-    const elems = () => {
-        for (let i = 0; i < allElements.length; i++) {  //  loop through the sections
-            let viewportOffset = allElements[i].getBoundingClientRect();  //  returns the size of an element and its position relative to the viewport
-            let top = viewportOffset.top;  //  get the offset top
-            if(top < windowHeight*7/16){  //  if the top offset is less than the window height
-                allElements[i].classList.add('in-viewport');  //  add the class
+
+    var scrollHandler = function (){
+        var tempSec = 0;
+        for (let i = 0; i < sections.length; i++) {
+            let top = sections[i].getBoundingClientRect().top;  // gets the top offset
+            if(top < windowHeight*7/16){
+                tempSec ++;
             } else{
-                allElements[i].classList.remove('in-viewport');  //  remove the class
+                break;
             }
         }
-    }
-    elems();
-    window.addEventListener('scroll', elems);
+        if (currentSec!=tempSec){
+            lastSec = currentSec;
+            currentSec = tempSec;
 
-
-
-    //  onscroll
-
-    const dotActive = () => {
-        var allVis = document.getElementsByClassName('in-viewport');
-        var allDots = document.getElementsByClassName('dots');
-        var visNum = allVis.length;
-        let a = visNum - 1;
-        for (let i = 0; i < allElements.length; i++) {
-            allDots[i].parentElement.classList.remove('selected-nav');
+            fixDots();
         }
-        if ((a == 1 || a==2) && defaultNav){
+    }
+    scrollHandler();
+    fixDots();
+    window.addEventListener('scroll', scrollHandler);
+
+
+    function fixDots() {
+        let num = currentSec - 1;
+        dots[lastSec-1].parentElement.classList.remove('selected-nav');  //uselect last "button"
+
+        if ((num == 1 || num==2) && defaultNav){
             changeNav(navColors[1]);
             defaultNav = false;
         }
-        else if ((a != 1 && a!=2) && !defaultNav){
+        else if ((num != 1 && num!=2) && !defaultNav){
             changeNav(navColors[0]);
             defaultNav = true;
         }
-        document.getElementById('dot-' + a).parentElement.classList.add('selected-nav');
-    }
 
-    
-    dotActive();
-    window.onscroll = function(){ dotActive(); };
+        dots[num].parentElement.classList.add('selected-nav');
+    }
 }
