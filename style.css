@@ -14,7 +14,25 @@ html{
 }
 
 /*Nav side bar*/
-@font-face{ font-family: nav; src: url( "fonts/VisbyRound-DemiBold.otf");}
+
+/*To pick only one later */
+@font-face{ font-family: nav1; src: url( "fonts/VisbyRound-DemiBold.otf");}
+@font-face{ font-family: nav2; src: url( "fonts/VisbyRound-Bold.otf");}
+@font-face{ font-family: nav3; src: url( "fonts/VisbyRound-ExtraBold.otf");}
+
+@keyframes change{
+    0%      {font-family: nav1;}
+    33%     {font-family: nav2;}
+    66%     {font-family: nav3;}
+    100%    {font-family: nav1;}
+}
+
+li p{
+    animation-name: change;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
 
 nav{
     position: fixed;
