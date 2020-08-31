@@ -13,42 +13,20 @@ html{
     scroll-behavior: smooth;
 }
 
+h1{
+    font-family: h1;
+    font-size: 3.6em;
+}
+
+p{
+    font-family: p;
+    font-size: 1.2em;
+}
+
+@font-face{ font-family: h1; src: url( "fonts/Montserrat-Black.ttf");}
+@font-face{ font-family: p; src: url( "fonts/WorkSans-Regular.ttf");}
+@font-face{ font-family: nav; src: url( "fonts/Rubik-ExtraBold.ttf");}
 /*Nav side bar*/
-@font-face{ font-family: nav; src: url( "fonts/VisbyRound-ExtraBold.otf");}
-
-/*To pick only one later */
-@font-face{ font-family: nav0; src: url( "fonts/BalooBhaina2-ExtraBold.ttf");}
-@font-face{ font-family: nav1; src: url( "fonts/Calistoga-Regular.ttf");}
-@font-face{ font-family: nav2; src: url( "fonts/FredokaOne-Regular.ttf");}
-@font-face{ font-family: nav3; src: url( "fonts/NotoSansKR-Black.otf");}
-@font-face{ font-family: nav4; src: url( "fonts/PatuaOne-Regular.ttf");}
-@font-face{ font-family: nav5; src: url( "fonts/PlayfairDisplay-Black.ttf");}
-@font-face{ font-family: nav6; src: url( "fonts/PTSansCaption-Bold.ttf");}
-@font-face{ font-family: nav7; src: url( "fonts/Rubik-ExtraBold.ttf");}
-@font-face{ font-family: nav8; src: url( "fonts/Sansita-ExtraBold.ttf");}
-@font-face{ font-family: nav9; src: url( "fonts/VisbyRound-ExtraBold.otf");}
-
-@keyframes change{
-    0%      {font-family: nav0;}
-    10%     {font-family: nav1; color: red}
-    20%     {font-family: nav2; color: orange}
-    30%     {font-family: nav3; color: tomato}
-    40%     {font-family: nav4; color: teal}
-    50%     {font-family: nav5; color: thistle}
-    60%     {font-family: nav6; color: turquoise}
-    70%     {font-family: nav7; color: violet;}
-    80%     {font-family: nav8; color: yellowgreen;}
-    90%     {font-family: nav9; color: yellow}
-    100%    {font-family: nav0;}
-}
-
-li p{
-    animation-name: change;
-	animation-duration: 10s;
-    animation-iteration-count: infinite;
-}
-
-/*end*/
 
 nav{
     position: fixed;
@@ -78,6 +56,7 @@ li a{
 
 li p{
     font-family: nav;
+    
     display: block;
 
     font-size: 0em;
@@ -111,6 +90,7 @@ li:hover p, .selected-nav p{
 /*Sections*/
 section{
     width: 100%;
+    height: 101vh;
     min-height: 101vh;
 }
 
@@ -128,11 +108,30 @@ section{
     display: flex;
 }
 
+#About h1{
+    color: #F87A7B;
+} 
+
 #img-container{
     height: 100%;
-    width: 545px;
+    width: 36%;
     background-color: #596466;
+    margin: 0px 7% 0px 7%;
 }
+
+#about-text{
+    width: 24%;
+    margin: auto auto auto 0px;
+}
+
+#about-text h1+p{
+    margin-top: 2em;
+}
+
+#about-text p+p{
+    margin-top: 1em;
+}
+
 
 /*Experience-Education Section*/
 
@@ -149,7 +148,7 @@ section{
 /*Work Section*/
 
 #Work{
-    background-color: #B0D6D7;
+    background-color: #9ec9ca;
 }
 
 /*Contacts Section*/
