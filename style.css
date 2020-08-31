@@ -16,11 +16,21 @@ html{
 h1{
     font-family: h1;
     font-size: 3.6em;
+    color: #F87A7B;
+}
+
+#Home h1, #Experience h1{
+    color: white;
+}
+
+#Home p, #Experience p{
+    color: white;
 }
 
 p{
     font-family: p;
     font-size: 1.2em;
+    text-align: justify;
 }
 
 @font-face{ font-family: h1; src: url( "fonts/Montserrat-Black.ttf");}
@@ -91,7 +101,6 @@ li:hover p, .selected-nav p{
 section{
     width: 100%;
     height: 101vh;
-    min-height: 101vh;
 }
 
 
@@ -99,6 +108,22 @@ section{
 
 #Home{
     background-color: #2B97A4;
+    display: flex;
+}
+
+#Home-img-container{
+    background-color: #ffffff;
+    height: 76%;
+    width: 30%;
+    margin: auto auto auto 0px;
+}
+
+#home-text{
+    margin: auto 10% auto 15%;
+}
+
+#home-text p:first-child{
+    font-size: 2em;
 }
 
 /*About Section*/
@@ -108,11 +133,7 @@ section{
     display: flex;
 }
 
-#About h1{
-    color: #F87A7B;
-} 
-
-#img-container{
+#About-img-container{
     height: 100%;
     width: 36%;
     background-color: #596466;
@@ -120,7 +141,7 @@ section{
 }
 
 #about-text{
-    width: 24%;
+    width: 30%;
     margin: auto auto auto 0px;
 }
 
