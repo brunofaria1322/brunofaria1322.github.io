@@ -17,10 +17,9 @@ h1{
     font-family: h;
     font-size: 3.6em;
     color: #F87A7B;
-}
-
-#Home h1{
-    color: white;
+    
+    padding-top: 3%;
+    text-align: center;
 }
 
 #Home p, #Experience p{
@@ -111,6 +110,12 @@ section{
     display: flex;
 }
 
+#Home h1{
+    color: white;
+    padding-top: 0px;
+    text-align: left;
+}
+
 #Home-img-container{
     background-color: #ffffff;
     height: 76%;
@@ -132,6 +137,13 @@ section{
 #About{
     background-color: #ffffff;
     display: flex;
+    padding-top: 0;
+    text-align: left;
+}
+
+#About h1 {
+    padding-top: 0px;
+    text-align: left;
 }
 
 #About-img-container{
@@ -165,9 +177,7 @@ section{
 }
 
 #Experience h1{
-    padding-top: 3%;
     color: white;
-    text-align: center;
 }
 
 #time-line{
@@ -253,24 +263,19 @@ section{
     height: auto;
 }
 
-#Skills h1{
-    padding-top: 3%;
-    text-align: center;
-}
-
 #skills-container{
     margin: auto;
 
     padding: 6em 0px;
 
     width: 60%;
-    height: 900px;
+    height: 95vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+
     grid-template-areas: 
-        "element1 element2 element3"
-        "element4 element5 element6";
+        "skill1 skill2 skill3"
+        "skill4 skill5 skill6";
     grid-gap: 1.5em 3em;
 }
 
@@ -280,22 +285,22 @@ section{
 }
 
 #skill1{
-    grid-area: element1;
+    grid-area: skill1;
 }
 #skill2{
-    grid-area: element2;
+    grid-area: skill2;
 }
 #skill3{
-    grid-area: element3;
+    grid-area: skill3;
 }
 #skill4{
-    grid-area: element4;
+    grid-area: skill4;
 }
 #skill5{
-    grid-area: element5;
+    grid-area: skill5;
 }
 #skill6{
-    grid-area: element6;
+    grid-area: skill6;
 }
 
 h2{
@@ -328,7 +333,47 @@ h2{
 
 #Work{
     background-color: #9ec9ca;
+    height: auto;
+    min-height: 110vh;
 }
+
+#work-container{
+    margin: auto;
+
+    padding: 6em 0px;
+
+    width: 60%;
+    height: 550px;
+    display: grid;
+
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-template-areas: 
+        "work1 work1 work2"
+        "work1 work1 work3";
+    grid-gap: .5em .5em;
+}
+
+#work1{
+    grid-area: work1;
+
+    /*-toRemove-*/
+    background-color: indianred;
+}
+
+#work2{
+    grid-area: work2;
+
+    /*-toRemove-*/
+    background-color: indianred;
+}
+
+#work3{
+    grid-area: work3;
+
+    /*-toRemove-*/
+    background-color: indianred;
+}
+
 
 /*Contacts Section*/
 
