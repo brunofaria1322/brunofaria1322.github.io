@@ -14,7 +14,7 @@ html{
 }
 
 h1{
-    font-family: h1;
+    font-family: h;
     font-size: 3.6em;
     color: #F87A7B;
 }
@@ -33,7 +33,7 @@ p{
     text-align: justify;
 }
 
-@font-face{ font-family: h1; src: url( "fonts/Montserrat-Black.ttf");}
+@font-face{ font-family: h; src: url( "fonts/Montserrat-Black.ttf");}
 @font-face{ font-family: p; src: url( "fonts/WorkSans-Regular.ttf");}
 @font-face{ font-family: nav; src: url( "fonts/Rubik-ExtraBold.ttf");}
 /*Nav side bar*/
@@ -159,6 +159,9 @@ section{
 
 #Experience{
     background-color: #F87A7B;
+
+    display: flex;
+    flex-direction: column;
 }
 
 #Experience h1{
@@ -174,6 +177,8 @@ section{
     
     display: flex;
     flex-direction: column;
+    
+    flex-grow: 1;
 }
 
 .line{
@@ -187,6 +192,8 @@ section{
 .line:last-child{
     background-image: linear-gradient(#B0D6D7, #2B97A4);
     flex-grow: 1;
+
+    border-radius: 30px 30px 0px 0px;
 }
 
 .dot{
@@ -243,14 +250,79 @@ section{
 
 #Skills{
     background-color: #D7C8C5;
+    height: auto;
 }
 
 #Skills h1{
     padding-top: 3%;
-    padding-left: -10%;
     text-align: center;
 }
 
+#skills-container{
+    margin: auto;
+
+    padding: 6em 0px;
+
+    width: 60%;
+    height: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "element1 element2 element3"
+        "element4 element5 element6";
+    grid-gap: 1.5em 3em;
+}
+
+.skill{
+    background-color: #ECDDDA;
+    border-radius: 30px;
+}
+
+#skill1{
+    grid-area: element1;
+}
+#skill2{
+    grid-area: element2;
+}
+#skill3{
+    grid-area: element3;
+}
+#skill4{
+    grid-area: element4;
+}
+#skill5{
+    grid-area: element5;
+}
+#skill6{
+    grid-area: element6;
+}
+
+h2{
+    font-family: h;
+    font-size: 2.1em;
+    color: #F87A7B;
+    text-align: center;
+    font-weight: bold;
+}
+
+.skill img{
+    display: block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 30px auto 20px auto;
+
+    /*-toRemove-*/
+    background-color: gray;
+}
+
+.skill p{
+    display: block;
+    font-size: 0.8em;
+    width: 90%;
+    margin: 1em auto;
+}
 
 /*Work Section*/
 
