@@ -13,6 +13,10 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: #596466;
+}
+
 h1{
     font-family: h;
     font-size: 3.6em;
@@ -22,7 +26,7 @@ h1{
     text-align: center;
 }
 
-#Home p, #Experience p{
+#Home p, #Experience p, #Contacts p{
     color: white;
 }
 
@@ -34,6 +38,7 @@ p{
 
 @font-face{ font-family: h; src: url( "fonts/Montserrat-Black.ttf");}
 @font-face{ font-family: p; src: url( "fonts/WorkSans-Regular.ttf");}
+@font-face{ font-family: light; src: url( "fonts/WorkSans-ExtraLight.ttf");}
 @font-face{ font-family: nav; src: url( "fonts/Rubik-ExtraBold.ttf");}
 /*Nav side bar*/
 
@@ -313,10 +318,10 @@ h2{
 
 .skill img{
     display: block;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
-    margin: 30px auto 20px auto;
+    margin: 30px auto 1em auto;
 
     /*-toRemove-*/
     background-color: gray;
@@ -378,7 +383,118 @@ h2{
 /*Contacts Section*/
 
 #Contacts{
-    background-color: #596466;
+    height: 100vh;
+}
+
+#Contacts h1{
+    text-align: left;
+    padding: 0;
+}
+
+#Contacts p{
+    margin: 3em auto 3em auto;
+}
+
+#contacts-container{
+    margin: auto;
+    padding: 6em 0px;
+    width: 70%;
+    display: flex;
+}
+
+#contacts-text{
+    width: 40%;
+    margin: auto;
+}
+
+#media{
+    display: flex;
+}
+
+#media a{
+    margin: auto;
+    height: 60px;
+    width: 60px;
+
+    /*-toRemove-*/
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.5);
+}
+
+form{
+    margin: auto;
+    width: 49%;
+}
+
+form *{
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    background-color: #637477;
+
+    padding-left:30px;
+    box-sizing: initial;
+    
+    font-family: light;
+    font-size: 1em;
+    color: rgba(255,255,255,.8);
+}
+
+textarea{
+    resize: none;
+}
+
+form *:focus{
+    outline: none;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: light;
+    font-size: 1em;
+    color: rgba(255,255,255,.8);
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: light;
+    font-size: 1em;
+    color: rgba(255,255,255,.8);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    font-family: light;
+    font-size: 1em;
+    color: rgba(255,255,255,.8);
+}
+
+#send-button{
+    font-family: p;
+    font-size: 1.2em;
+    background-color: #F87A7B;
+    color: rgb(255,255,255);
+}
+
+form * + *{
+    margin-top: 1em;
+}
+
+input{
+    height: 50px;
+}
+
+textarea{
+    padding-top:30px;
+    height: 255px;
+}
+
+
+footer p{
+    padding-bottom: .5em;
+    text-align: center;
+    font-style: italic;
+    font-family: light;
+    color: rgba(255,255,255,.5);
 }
 
 /*Responsive*/
