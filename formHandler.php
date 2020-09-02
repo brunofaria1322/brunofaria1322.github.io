@@ -3,22 +3,17 @@
     $visitor_email = $_POST["email"];
     $message = $_POST["message"];
 
-    $email_from = "brunofria1322@gmail.com";
-
     $subject = "New Form Submission";
-
-    $email_body = "Name: $name.\n". 
-                    "Email: $visitor_email.\n".
-                        "Message: $message.\n";
         
-    $to = "brunofria1322@gmail.com";
+    $to = "brunofaria1322@gmail.com";
 
-    $headers = "From: $email_from \r\n";
-
-    $headers .= "Reply-To: $visitor_email \r\n";
+    $headers ="From: " . $name . "<". $visitor_email .">\r\n";
     
-    mail($to, $email_subject, $email_body,$headers);
+    if(mail($to, $subject, $message, $headers)){
+	    $out_message = "Your contact information is received successfully.";
+	    $type = "success";
+    }
 
-    header("Location: index.html");
+    require_once "formHandler.php";
 
 ?>
