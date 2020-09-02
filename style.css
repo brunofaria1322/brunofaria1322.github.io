@@ -408,6 +408,9 @@ h2{
 
     color: white;
 } 
+.work:hover{
+    cursor: pointer;
+}
 
 .work:hover .overlay {
     cursor: pointer;
