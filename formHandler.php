@@ -1,16 +1,22 @@
 <?php
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
 
-    $subject = "New Form Submission";
-    $formcontent="From: $name \n Message: $message";
+if (isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    $subject = 'New Form Submission';
         
-    $to = "brunofaria1322@gmail.com";
+    $mail_to = "my@email.com";
 
-    $mailheader = "From: $email \r\n";
+    $headers = "From: ".$email;
     
-    mail($to, $subject, $formcontent, $mailheader)  or die("Error!");
-    echo "Thank You!";
+    $txt = "Message from personal website from ".$name.".\n\n".$message;
+
+    mail($mail_to, $subject, $txt, $headers);
+
+    header("Location: index.html");
+    echo 'Thank You!';
+}
 
 ?>
