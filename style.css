@@ -410,7 +410,7 @@ h2{
 }
 
 #contacts-container{
-    margin: auto;
+    margin: 6em auto auto auto;
     padding: 6em 0px;
     width: 70%;
     display: flex;
@@ -524,6 +524,10 @@ input:focus, textarea:focus{
     border-bottom: 3px solid #F87A7B;
 }
 
+footer{
+    margin:0;
+}
+
 footer p{
     padding-bottom: .5em;
     text-align: center;
@@ -531,6 +535,7 @@ footer p{
     font-family: light;
     color: rgba(255,255,255,.5);
 }
+
 
 /*Responsive*/
 

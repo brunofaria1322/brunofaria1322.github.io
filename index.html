@@ -183,10 +183,10 @@
                         </a>
                     </div>
                 </div>
-                <form>
-                    <input type="text" name="FullName" placeholder="Full Name">
-                    <input type="text" name="Email" placeholder="Email Address">
-                    <textarea id="subject" name="subject" placeholder="Type your message"></textarea>
+                <form method="POST" action="formHandler.php">
+                    <input type="text" name="FullName" placeholder="Full Name" required>
+                    <input type="email" name="Email" placeholder="Email Address" required>
+                    <textarea id="subject" name="subject" placeholder="Type your message" required></textarea>
                     <input type="submit" id = "send-button" value="Send">
                 </form>
             </div>
