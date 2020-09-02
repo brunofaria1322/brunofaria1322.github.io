@@ -413,7 +413,6 @@ h2{
 }
 
 .work:hover .overlay {
-    cursor: pointer;
     height: 100%;
     opacity: 1;
 }
@@ -440,6 +439,76 @@ h2{
     background-color: indianred;
 }
 
+/*onClick*/
+#full-screen-work{
+    position: fixed;
+    top: 0px;
+    left: 100vw;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, .9);
+
+    opacity: 1;
+
+}
+
+#full-screen-work #work_image{
+    position: fixed;
+    
+    object-fit: cover;
+    
+    width: 0%;
+    height: 0%;
+    
+}
+
+#full-screen-work h1{
+    text-align: left;
+    font-size: 2em;
+    display: block;
+
+    width: 40%;
+
+    margin: 4em 0 0 45%;;
+}
+
+#full-screen-work p{
+    font-size: .8em;
+    color: white;
+    display: block;
+
+    width: 40%;
+    height: auto;
+
+    margin: 3em 0 0 45%;
+
+}
+
+#full-screen-work a img{
+    width: 40px;
+    height: 40px;
+    
+    margin: 2em 0px 0px 65%;
+    transform: translate(-50%, 0px);
+}
+
+#full-screen-work #exit{
+    transition: .5s ease;
+
+    position: fixed;
+
+    top: 49%;
+    left: 100vw;
+
+    width: 35px;
+    height: 35px;
+}
+
+#full-screen-work #exit:hover{  
+    cursor: pointer;
+    transform: rotate(270deg);
+}
 
 /*Contacts Section*/
 
