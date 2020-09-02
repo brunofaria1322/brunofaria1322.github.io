@@ -64,8 +64,7 @@ li a{
     margin: 5px 0px 5px 0px;
 
     
-    transition: 0.5s;
-    transition-timing-function: ease;
+    transition: 0.5s ease;
 }
 
 li p{
@@ -176,6 +175,9 @@ section{
 
 #Experience{
     background-color: #F87A7B;
+    
+    height: auto;
+    min-height: 110vh;
 
     display: flex;
     flex-direction: column;
@@ -187,7 +189,7 @@ section{
 
 #time-line{
     width: 50%;
-    height: 80%;
+    height: 35px;
     margin: 6em auto auto auto;
     
     display: flex;
@@ -274,7 +276,7 @@ section{
     padding: 6em 0px;
 
     width: 60%;
-    height: 95vh;
+    height: 90vh;
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
 
@@ -287,6 +289,9 @@ section{
 .skill{
     background-color: #ECDDDA;
     border-radius: 30px;
+
+    
+    transition: linear .3s;
 }
 
 #skill1{
@@ -316,15 +321,15 @@ h2{
     font-weight: bold;
 }
 
+#html-css{
+    display: flex;
+}
+
 .skill img{
     display: block;
     height: 80px;
     width: 80px;
-    border-radius: 50%;
     margin: 30px auto 1em auto;
-
-    /*-toRemove-*/
-    background-color: gray;
 }
 
 .skill p{
@@ -333,6 +338,15 @@ h2{
     width: 90%;
     margin: 1em auto;
 }
+
+.skill:hover{
+    background-color: #F87A7B;
+}
+
+.skill:hover h2, .skill:hover p{
+    color: white;
+}
+
 
 /*Work Section*/
 
@@ -409,16 +423,24 @@ h2{
 
 #media{
     display: flex;
+    height: 80px;
 }
 
 #media a{
     margin: auto;
+}
+
+#media a img{
     height: 60px;
     width: 60px;
 
-    /*-toRemove-*/
-    border-radius: 50%;
-    background-color: rgba(255,255,255,.5);
+    transition: 0.5s ease;
+}
+
+#media a img:hover{
+    height: 75px;
+    width: 75px;
+
 }
 
 form{
@@ -429,15 +451,17 @@ form{
 form *{
     width: 100%;
     border-radius: 30px;
-    border: none;
+    border: transparent;
     background-color: #637477;
 
     padding-left:30px;
-    box-sizing: initial;
+    box-sizing: border-box;
     
     font-family: light;
     font-size: 1em;
     color: rgba(255,255,255,.8);
+
+    transition: linear .3s;
 }
 
 textarea{
@@ -445,7 +469,7 @@ textarea{
 }
 
 form *:focus{
-    outline: none;
+    outline: transparent;
 }
 
 
@@ -470,9 +494,17 @@ form *:focus{
 
 #send-button{
     font-family: p;
+    padding: 0px;
     font-size: 1.2em;
     background-color: #F87A7B;
     color: rgb(255,255,255);
+
+}
+
+#send-button:hover{
+    background-color: #F2A4A0;
+    cursor: pointer;
+    border-bottom: 3px solid white;
 }
 
 form * + *{
@@ -488,6 +520,9 @@ textarea{
     height: 255px;
 }
 
+input:focus, textarea:focus{
+    border-bottom: 3px solid #F87A7B;
+}
 
 footer p{
     padding-bottom: .5em;
