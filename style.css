@@ -234,7 +234,6 @@ canvas{
 
 #time-line{
     width: 50%;
-    height: 35px;
     margin: 6em auto auto auto;
     
     display: flex;
@@ -247,7 +246,7 @@ canvas{
     margin: 0px auto 0px auto;
     width: 10px;
     background-color:#B0D6D7;
-    height: 5%;
+    height: 2.5em;
     border-radius: 30px;
 }
 
@@ -466,9 +465,6 @@ h2{
 
 #work1{
     grid-area: work1;
-
-    /*-toRemove-*/
-    background-color: indianred;
 }
 
 #work2{
@@ -559,7 +555,8 @@ h2{
 /*Contacts Section*/
 
 #Contacts{
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
 
 #Contacts h1{
@@ -700,7 +697,7 @@ footer p{
 
 
 /*Responsive*/
-@media screen and (max-width: 1200px) {
+@media only screen and (max-width: 1150px) {
 
     /*Nav side bar*/
 
@@ -774,8 +771,134 @@ footer p{
         font-size: 1.2em;
     }
     
+    /*About Section*/
+    
+    #About-img-container{
+        width: 40%;
+        margin: 0px 5% 0px 5%;
+    }
+
+    #about-text{
+        width: 40%;
+        margin: auto 5% auto 0px;
+    }
+
+    /*Experience-Education Section*/
+    #time-line{
+        width: 90%;
+    }
+
+    /*Skills Section*/
+    #skills-container{
+        width: 90%;
+    }
+
+    /*Work Section*/
+    #work-container{
+        width: 90%;
+    }
+
+    /*TODO: work over*/
+
+    
+    /*Contacts Section*/
+    #contacts-container{
+        width: 90%;
+    }
+    
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+    /*Home Section*/
+
+    #home-text{
+        left: 20%;
+    }
+
+    /*About Section*/
     
+    #About{
+        overflow:auto;
+        display: block;
+    }
+
+    #About-img-container{
+        height: 40%;
+        width: 100%;
+        margin: 5% 0px 5% 0px;
+    }
+
+    #about-text{
+        width: 90%;
+        height: 50%;
+        margin: 0px 5% 0px 5%;
+    }
+
+    /*Skills Section*/
+    #skills-container{
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    
+        grid-template-areas: 
+            "skill1 skill2"
+            "skill3 skill4" 
+            "skill5 skill6";
+    }
+    
+    /*Work Section*/
+    #work-container{
+    
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+        grid-template-areas: 
+            "work1 work1"
+            "work1 work1" 
+            "work2 work3";
+    
+    }
+    
+    /*Contacts Section*/
+    #contacts-container{
+        display: block;
+    }
+
+    #contacts-text{
+        width: 100%;
+    }
+
+    form{
+        margin-top: 3em;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    /*Home Section*/
+
+    #home-text{
+        left: 15%;
+    }
+
+    /*Skills Section*/
+    #skills-container{
+        grid-template: repeat(6, 1fr) / 1fr;
+    
+        grid-template-areas: 
+            "skill1"
+            "skill2"
+            "skill3"
+            "skill4" 
+            "skill5"
+            "skill6";
+    }
+    
+    /*Work Section*/
+    #work-container{
+    
+        grid-template: repeat(3, 1fr) / 1fr;
+        grid-template-areas: 
+            "work1"
+            "work2" 
+            "work3";
+    
+    }
 }
