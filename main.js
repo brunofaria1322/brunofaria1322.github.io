@@ -170,7 +170,7 @@ function main(){
     svg.addEventListener("click", openCloseNav);
 
     function openCloseNav() {
-        nav.classList.toggle('opened')
+        nav.classList.toggle('opened');
     }
 
     //------------------Work FullScreen------------------//
@@ -195,6 +195,7 @@ function main(){
                 break;
             }
         }
+
         
         var num = parseInt(clicked_element.id[clicked_element.id.length - 1]) - 1;
         var img = clicked_element.children[0];
@@ -214,30 +215,11 @@ function main(){
         overlay.children[2].textContent= work_descriptions[num];
         
         //to end previos changes and not enter on transition
-        setTimeout(fullScreen, 1);;
+        setTimeout(fullScreen, 1);
     }
 
     function fullScreen(){
-
-        overlay.style.transition = "0.5s ease";
-        overlay.children[0].style.transition = ".9s ease";
-
-        overlay.style.left = "0px";
-        overlay.style.height= "100vh";
-        overlay.style.width= "100vw";
-
-        overlay.children[0].style.width="40%";
-        overlay.children[0].style.height="90%";
-
-        overlay.children[0].style.left="1%";
-        overlay.children[0].style.top="5%";
-        overlay.children[0].style.transform="scale(0.9)";
-
-        overlay.children[3].style.height= "40px";
-        overlay.children[3].style.width= "40px";
-
-        overlay.children[3].children[0].style.height= "40px";
-        overlay.children[3].children[0].style.width= "40px";
+        overlay.parentElement.classList.toggle('full-screen');
 
         overlay.children[4].style.height= "35px";
         overlay.children[4].style.width= "35px";
@@ -247,31 +229,15 @@ function main(){
     }
 
     function exitFullScreen(){   
+        overlay.parentElement.classList.toggle('full-screen');
 
         overlay.children[0].src = "";
-
-        overlay.children[1].textContent= "";
-        overlay.children[2].textContent= "";
-        
-        
-        overlay.style.transition = "none";
-        overlay.children[0].style.transition = "none";
-
-        overlay.style.left = "100vw";
-        overlay.style.height= "0px";
-        overlay.style.width= "0px";
         
         overlay.children[0].style.height= "0px";
         overlay.children[0].style.width= "0px";
 
-        overlay.children[0].style.left= "100vw";
-        overlay.children[0].style.transform="scale(1)";
-
-        overlay.children[3].style.height= "0px";
-        overlay.children[3].style.width= "0px";
-
-        overlay.children[3].children[0].style.height= "0px";
-        overlay.children[3].children[0].style.width= "0px";
+        overlay.children[1].textContent= "";
+        overlay.children[2].textContent= "";
         
         overlay.children[4].style.height= "0px";
         overlay.children[4].style.width= "0px";

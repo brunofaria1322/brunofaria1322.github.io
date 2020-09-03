@@ -391,7 +391,6 @@ h2{
     color: white;
 }
 
-
 /*Work Section*/
 
 #Work{
@@ -495,6 +494,13 @@ h2{
 
 }
 
+.full-screen #full-screen-work{
+    transition: 0.5s ease;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
 #full-screen-work #work_image{
     position: fixed;
     
@@ -503,6 +509,16 @@ h2{
     width: 0%;
     height: 0%;
     
+}
+
+.full-screen #full-screen-work #work_image{
+    transition: .9s ease;
+    width: 40%!important;
+    height: 90%!important;
+    left: 1%!important;
+    top: 5%!important;
+    transform: scale(.9);
+
 }
 
 #full-screen-work h1{
@@ -527,12 +543,27 @@ h2{
 
 }
 
+#full-screen-work a{
+    width: 0px;
+    height: 0px;
+}
+
+.full-screen #full-screen-work a{
+    width: 40px;
+    height: 40px;
+}
+
 #full-screen-work a img{
     width: 0px;
     height: 0px;
     
     margin: 2em 0px 0px 65%;
     transform: translate(-50%, 0px);
+}
+
+.full-screen #full-screen-work a img{
+    width: 40px;
+    height: 40px;
 }
 
 #full-screen-work #exit{
@@ -545,6 +576,13 @@ h2{
 
     width: 0px;
     height: 0px;
+}
+
+.full-screen #full-screen-work #exit{
+    left: 95%;
+
+    width: 35px;
+    height: 35px;
 }
 
 #full-screen-work #exit:hover{  
