@@ -4,8 +4,8 @@
 }
 
 :root{
-    --nav-normal: #F2A4A0;
-    --nav-selected: #F87A7B;
+    --nav-normal: #f2a4a0;
+    --nav-selected: #f87a7b;
     --nav-text: #ffffff;
 }
 
@@ -156,24 +156,24 @@ section{
 
 #Home{
     background-color: #2B97A4;
-    display: flex;
+}
+
+canvas{
+    width: 100%;
+    height: 100%;
+}
+
+#home-text{
+    position: absolute;
+    left: 25%;
+    top: 45%;
 }
 
 #Home h1{
     color: white;
     padding-top: 0px;
+    font-size: 4em;
     text-align: left;
-}
-
-#Home-img-container{
-    background-color: #ffffff;
-    height: 76%;
-    width: 30%;
-    margin: auto auto auto 0px;
-}
-
-#home-text{
-    margin: auto 10% auto 15%;
 }
 
 #home-text > p:first-child{
@@ -490,12 +490,12 @@ h2{
     position: fixed;
     top: 0px;
     left: 100vw;
-    width: 100vw;
-    height: 100vh;
+    width: 0px;
+    height: 0px;
 
     background-color: rgba(0, 0, 0, .9);
 
-    opacity: 1;
+    z-index: 1;
 
 }
 
@@ -532,8 +532,8 @@ h2{
 }
 
 #full-screen-work a img{
-    width: 40px;
-    height: 40px;
+    width: 0px;
+    height: 0px;
     
     margin: 2em 0px 0px 65%;
     transform: translate(-50%, 0px);
@@ -547,8 +547,8 @@ h2{
     top: 49%;
     left: 100vw;
 
-    width: 35px;
-    height: 35px;
+    width: 0px;
+    height: 0px;
 }
 
 #full-screen-work #exit:hover{  
@@ -700,8 +700,7 @@ footer p{
 
 
 /*Responsive*/
-
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
 
     /*Nav side bar*/
 
@@ -710,8 +709,8 @@ footer p{
         top: 0px;
         right: 0px;
         transform: none;
-        height: auto;
-        width: auto;
+        height: 0px;
+        width: 0px;
 
     }
 
@@ -747,6 +746,7 @@ footer p{
         height: 2.5em;
         width: 100%;
         background-color: rgba(255,255,255,.1);
+
     }
     
     li:hover p{
