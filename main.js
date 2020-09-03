@@ -158,5 +158,14 @@ function main(){
         overlay.children[4].removeEventListener("click", exitFullScreen);
 
     }
-}
 
+
+    var svg = document.getElementsByTagName("svg")[0];
+    var nav = document.getElementsByTagName("nav")[0];
+    
+    svg.addEventListener("click", openCloseNav);
+
+    function openCloseNav() {
+        nav.classList.toggle('opened')
+    }
+}

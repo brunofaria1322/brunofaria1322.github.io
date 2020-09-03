@@ -40,6 +40,7 @@ p{
 @font-face{ font-family: p; src: url( "fonts/WorkSans-Regular.ttf");}
 @font-face{ font-family: light; src: url( "fonts/WorkSans-ExtraLight.ttf");}
 @font-face{ font-family: nav; src: url( "fonts/Rubik-ExtraBold.ttf");}
+
 /*Nav side bar*/
 
 nav{
@@ -47,7 +48,56 @@ nav{
     top: 50%;
     right: 50px;
     transform: translate(0px, -50%);
+    transition: 0.5s ease;
 }
+
+
+/* Hamburger */
+svg{
+    position: fixed;
+    height: 0px;
+    right: 2%;
+    top: 3%;
+}
+
+.line {
+    fill: none;
+    stroke: var(--nav-normal);
+    stroke-width: 10px;
+    transition: stroke-dasharray .6s cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset .6s cubic-bezier(0.4, 0, 0.2, 1);}
+
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-dashoffset: 0;
+}
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-dashoffset: 0;
+}
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-dashoffset: 0;
+}
+
+/* X icon */
+.opened .line1 {
+    stroke: var(--nav-selected);
+}
+
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+}
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+}
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+}
+
 
 nav li{
     display: flex;
@@ -62,18 +112,18 @@ li a{
     border-radius: 50%;
     
     margin: 5px 0px 5px 0px;
-
     
     transition: 0.5s ease;
 }
 
 li p{
+    transition: 0.5s ease;
     font-family: nav;
     
     display: block;
 
     font-size: 0em;
-    font-weight: lighter;
+    font-weight: bold;
     color: transparent;
     
     text-align: right;
@@ -86,15 +136,10 @@ li:hover .dots, .selected-nav .dots{
     height: 23px;
     width: 23px;
     background-color: var(--nav-selected);
-    
 }
 
 li:hover p, .selected-nav p{
-    transition: 0.5s;
-    transition-timing-function: ease;
-
     font-size: 1.2em;
-    font-weight: bold;
     color: var(--nav-text);
 }
 
@@ -276,7 +321,7 @@ section{
     padding: 6em 0px;
 
     width: 60%;
-    height: 90vh;
+    min-height: 90vh;
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
 
@@ -371,6 +416,7 @@ h2{
         "work1 work1 work2"
         "work1 work1 work3";
     grid-gap: .5em .5em;
+
 }
 
 #work-container img{
@@ -657,6 +703,77 @@ footer p{
 
 @media screen and (max-width: 992px) {
 
+    /*Nav side bar*/
+
+    nav{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        transform: none;
+        height: auto;
+        width: auto;
+
+    }
+
+    /* Hamburger */
+    svg{
+        height: 40px;
+        width: 40px;
+    }
+
+    svg:hover{
+        cursor: pointer;
+    }
+
+    li a{
+        background-color: transparent;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    li p{
+        color: var(--nav-normal);
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        margin: .6em;
+
+        z-index: -1;
+    }
+
+    li:hover .dots, .selected-nav .dots{
+        margin-left: 0px;
+        margin-right: 0px;
+        height: 2.5em;
+        width: 100%;
+        background-color: rgba(255,255,255,.1);
+    }
+    
+    li:hover p{
+        color: var(--nav-selected);
+        transform: scale(1.1);
+    }
+
+    .selected-nav p{
+        font-size: 0px;    
+        color: var(--nav-selected);    
+    }
+
+    li:first-child{
+        margin-top: 4em;
+    }
+
+
+    nav.opened{
+        background-color: rgba(0,0,0,0.7);
+        width: 250px;
+        height: 100vh;
+    }
+
+    nav.opened p{
+        font-size: 1.2em;
+    }
+    
 }
 
 @media screen and (max-width: 600px) {
