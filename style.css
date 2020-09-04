@@ -184,6 +184,9 @@ canvas{
 /*About Section*/
 
 #About{
+    height: auto;
+    min-height: 110vh;
+
     background-color: #ffffff;
     display: flex;
     padding-top: 0;
@@ -196,7 +199,7 @@ canvas{
 }
 
 #About-img-container{
-    height: 100%;
+    height: 110vh;
     width: 36%;
     background-color: #596466;
     margin: 0px 7% 0px 7%;
@@ -543,8 +546,12 @@ h2{
 }
 
 #full-screen-work a{
+    display: block;
     width: 0px;
     height: 0px;
+    
+    margin: 2em 0px 0px 65%;
+    transform: translate(-50%, 0px);
 }
 
 .full-screen #full-screen-work a{
@@ -555,9 +562,6 @@ h2{
 #full-screen-work a img{
     width: 0px;
     height: 0px;
-    
-    margin: 2em 0px 0px 65%;
-    transform: translate(-50%, 0px);
 }
 
 .full-screen #full-screen-work a img{
@@ -835,14 +839,14 @@ footer p{
 
     .full-screen #full-screen-work #work_image{
         width: 90%!important;
-        height: 40%!important;
+        height: 300px!important;
         left: 5%!important;
     }
 
     #full-screen-work h1{
         width: 90%;
     
-        margin: 12em auto auto auto;
+        margin: 350px auto auto auto;
     }
     
     #full-screen-work p{
@@ -850,14 +854,11 @@ footer p{
 
         height: auto;
     
-        margin: 3em auto auto auto;
+        margin: 2em auto auto auto;
     
     }
 
-    #full-screen-work a img{
-        width: 0px;
-        height: 0px;
-        
+    #full-screen-work a{
         margin: 2em 0px 0px 50%;
         transform: translate(-50%, 0px);
     }
@@ -894,7 +895,7 @@ footer p{
     }
 
     #About-img-container{
-        height: 40%;
+        height: 45vh;
         width: 100%;
         margin: 5% 0px 5% 0px;
     }
@@ -902,7 +903,7 @@ footer p{
     #about-text{
         width: 90%;
         height: 50%;
-        margin: 0px 5% 0px 5%;
+        margin: 0px 5% 3em 5%;
     }
 
     /*Skills Section*/
@@ -948,6 +949,12 @@ footer p{
     #home-text{
         left: 15%;
     }
+    /*Experience-Education Section*/
+
+    #Experience h1{
+        font-size: 2.6em;
+    }
+
 
     /*Skills Section*/
     #skills-container{
