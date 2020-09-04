@@ -518,7 +518,6 @@ h2{
     left: 1%!important;
     top: 5%!important;
     transform: scale(.9);
-
 }
 
 #full-screen-work h1{
@@ -572,15 +571,13 @@ h2{
     position: fixed;
 
     top: 49%;
-    left: 100vw;
+    left: 95%;
 
     width: 0px;
     height: 0px;
 }
 
 .full-screen #full-screen-work #exit{
-    left: 95%;
-
     width: 35px;
     height: 35px;
 }
@@ -836,9 +833,45 @@ footer p{
         width: 90%;
     }
 
-    /*TODO: work over*/
+    .full-screen #full-screen-work #work_image{
+        width: 90%!important;
+        height: 40%!important;
+        left: 5%!important;
+    }
 
+    #full-screen-work h1{
+        width: 90%;
     
+        margin: 12em auto auto auto;
+    }
+    
+    #full-screen-work p{
+        width: 90%;
+
+        height: auto;
+    
+        margin: 3em auto auto auto;
+    
+    }
+
+    #full-screen-work a img{
+        width: 0px;
+        height: 0px;
+        
+        margin: 2em 0px 0px 50%;
+        transform: translate(-50%, 0px);
+    }
+
+    #full-screen-work #exit{
+        left: 0px;
+        top: 0px;
+
+        margin: 95vh 0px 0px 50%;
+        transform: translate(-50%, 0px);
+        
+        
+    }
+
     /*Contacts Section*/
     #contacts-container{
         width: 90%;

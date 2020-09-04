@@ -181,7 +181,10 @@ function main(){
     const work_descriptions = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"];    
-                
+    const work_github_links= ["https://github.com/brunofaria1322/brunofaria1322.github.io",
+                                "https://github.com/brunofaria1322/",
+                                "https://github.com/brunofaria1322/"];
+
     for (var i=0; i<works.length; i++){
         works[i].addEventListener("click", clickHandler)
     }
@@ -210,6 +213,7 @@ function main(){
         
 
         overlay.children[0].src= img.src;
+        overlay.children[3].href=  work_github_links[num];
 
         overlay.children[1].textContent= h1.textContent;
         overlay.children[2].textContent= work_descriptions[num];
@@ -220,10 +224,6 @@ function main(){
 
     function fullScreen(){
         overlay.parentElement.classList.toggle('full-screen');
-
-        overlay.children[4].style.height= "35px";
-        overlay.children[4].style.width= "35px";
-        overlay.children[4].style.left="95%";
         
         overlay.children[4].addEventListener("click", exitFullScreen);
     }
@@ -239,9 +239,6 @@ function main(){
         overlay.children[1].textContent= "";
         overlay.children[2].textContent= "";
         
-        overlay.children[4].style.height= "0px";
-        overlay.children[4].style.width= "0px";
-        overlay.children[4].style.left= "100vw";
 
         overlay.children[4].removeEventListener("click", exitFullScreen);
 
