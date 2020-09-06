@@ -745,9 +745,8 @@ footer p{
         top: 0px;
         right: 0px;
         transform: none;
-        height: 0px;
         width: 0px;
-
+        height: 100vh;
     }
 
     /* Hamburger */
@@ -764,6 +763,9 @@ footer p{
         background-color: transparent;
         width: 100%;
         border-radius: 0px;
+        margin: .6em 0px 0px 0px;
+
+        height: 1.2em;
     }
 
     li p{
@@ -771,23 +773,29 @@ footer p{
         position: absolute;
         width: 100%;
         text-align: center;
-        margin: .6em;
+        margin: .6em 0px 0px 0px;
 
         z-index: -1;
     }
 
+
     li:hover .dots, .selected-nav .dots{
         margin-left: 0px;
         margin-right: 0px;
+        margin-bottom: 0px;
         height: 2.5em;
         width: 100%;
         background-color: rgba(255,255,255,.1);
 
     }
     
-    li:hover p{
+    li:hover p, .selected-nav:hover p{
         color: var(--nav-selected);
         transform: scale(1.1);
+    }
+
+    li:hover a, .selected-nav a{
+        margin: 0px;
     }
 
     .selected-nav p{
@@ -803,7 +811,6 @@ footer p{
     nav.opened{
         background-color: rgba(0,0,0,0.7);
         width: 250px;
-        height: 100vh;
     }
 
     nav.opened p{
