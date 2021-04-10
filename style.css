@@ -324,12 +324,10 @@ canvas{
 
     width: 60%;
     min-height: 90vh;
+    height: auto;
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-    grid-template-areas: 
-        "skill1 skill2 skill3"
-        "skill4 skill5 skill6";
     grid-gap: 1.5em 3em;
 }
 
@@ -337,53 +335,27 @@ canvas{
     background-color: #ECDDDA;
     border-radius: 30px;
 
+    height: auto;
     
     transition: linear .3s;
 }
 
-#skill1{
-    grid-area: skill1;
-}
-#skill2{
-    grid-area: skill2;
-}
-#skill3{
-    grid-area: skill3;
-}
-#skill4{
-    grid-area: skill4;
-}
-#skill5{
-    grid-area: skill5;
-}
-#skill6{
-    grid-area: skill6;
-}
 
 h2{
     font-family: h;
-    font-size: 2.1em;
+    font-size: 2em;
     color: #F87A7B;
     text-align: center;
     font-weight: bold;
+    margin-bottom: 30px
 }
 
-#html-css{
-    display: flex;
-}
 
 .skill img{
     display: block;
     height: 80px;
     width: 80px;
     margin: 30px auto 1em auto;
-}
-
-.skill p{
-    display: block;
-    font-size: 0.8em;
-    width: 90%;
-    margin: 1em auto;
 }
 
 .skill:hover{
@@ -409,13 +381,15 @@ h2{
     overflow: hidden;
 
     width: 60%;
-    height: 550px;
+    height: 1000px;
     display: grid;
 
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
     grid-template-areas: 
         "work1 work1 work2"
-        "work1 work1 work3";
+        "work1 work1 work3"
+        "work4 work6 work6"
+        "work5 work6 work6";
     grid-gap: .5em .5em;
 
 }
@@ -471,9 +445,6 @@ h2{
 
 #work2{
     grid-area: work2;
-
-    /*-toRemove-*/
-    background-color: indianred;
 }
 
 #work3{
@@ -481,6 +452,24 @@ h2{
 
     /*-toRemove-*/
     background-color: indianred;
+}
+
+#work4{
+    grid-area: work4;
+
+    /*-toRemove-*/
+    background-color: indianred;
+}
+
+#work5{
+    grid-area: work5;
+
+    /*-toRemove-*/
+    background-color: indianred;
+}
+
+#work6{
+    grid-area: work6;
 }
 
 /*onClick*/
@@ -567,6 +556,24 @@ h2{
 .full-screen #full-screen-work a img{
     width: 40px;
     height: 40px;
+}
+
+
+#full-screen-work #butt{
+    display: flex;
+    width: 40%;
+    margin: 3em 0 0 45%;
+}
+
+#full-screen-work a:first-child{
+    margin: 2em 2em 0px auto;
+}
+#full-screen-work a:last-child{
+    margin: 2em auto 0px 2em;
+}
+
+#full-screen-work #butt .inactive img{
+    display: none;
 }
 
 #full-screen-work #exit{
@@ -865,9 +872,9 @@ footer p{
     
     }
 
-    #full-screen-work a{
-        margin: 2em 0px 0px 50%;
-        transform: translate(-50%, 0px);
+    #full-screen-work #butt{
+        width: 100%;
+        margin: auto;
     }
 
     #full-screen-work #exit{
@@ -875,8 +882,6 @@ footer p{
         top: 0px;
 
         margin: 95vh 0px 0px 50%;
-        transform: translate(-50%, 0px);
-        
         
     }
 

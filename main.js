@@ -178,10 +178,24 @@ function main(){
     var works = document.getElementsByClassName("work");
 
     const overlay= document.getElementById("full-screen-work"); //full box -> [img, h1, p, a (repository), exit_img]
-    const work_descriptions = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"];    
-    const work_github_links= ["https://github.com/brunofaria1322/brunofaria1322.github.io",
+    const work_descriptions = ["SCHOLL PROJECT - GROUP: A web application that, from a musical lyrics created by the user, generates a melody that accompanies it, taking into account its metrics and feeling.This app was built using, mainly, react.js and node.js. We also used figma for prototyping the UI, Photoshop for the social media posts, VSCode as the text editor and git for version controll. The goal of the project was to reach the maximum number of people, both users of the app and followers on social networks, and we even had some articles written about the app.",
+                                "This website was built as a portfolio/curriculum in order to compile my skils and work. It was built in pure JS as well with HTML5 and CSS3.",
+                                "Later...",
+                                "Later...",
+                                "Later...",
+                                "SCHOLL PROJECT - GROUP: A browser game based in the life of a freshman in the University of Coimbra using ECMAScript with HTML and CSS. Te goal of this project was to learn more about web and multimedia programming."];    
+    const work_github_links= [null,
+                                "https://github.com/brunofaria1322/brunofaria1322.github.io",
+                                "https://github.com/brunofaria1322/",
+                                "https://github.com/brunofaria1322/",
+                                "https://github.com/brunofaria1322/",
+                                "https://github.com/brunofaria1322/",
+                                "https://github.com/brunofaria1322/"];
+
+    const work_web_links= ["https://lowkey-app.com/",
+                                "brunofaria1322.github.io",
+                                "https://github.com/brunofaria1322/",
+                                "https://github.com/brunofaria1322/",
                                 "https://github.com/brunofaria1322/",
                                 "https://github.com/brunofaria1322/"];
 
@@ -213,7 +227,17 @@ function main(){
         
 
         overlay.children[0].src= img.src;
-        overlay.children[3].href=  work_github_links[num];
+        if(work_github_links[num]){
+            overlay.children[3].children[0].href =  work_github_links[num];
+        }else{
+            overlay.children[3].children[0].className = "inactive";
+        }
+
+        if(work_web_links[num]){
+            overlay.children[3].children[1].href =  work_web_links[num];
+        }else{
+            overlay.children[3].children[1].className = "inactive";
+        }
 
         overlay.children[1].textContent= h1.textContent;
         overlay.children[2].textContent= work_descriptions[num];
@@ -238,6 +262,10 @@ function main(){
 
         overlay.children[1].textContent= "";
         overlay.children[2].textContent= "";
+
+        
+        overlay.children[3].children[0].className = "";
+        overlay.children[3].children[1].className = "";
         
 
         overlay.children[4].removeEventListener("click", exitFullScreen);
