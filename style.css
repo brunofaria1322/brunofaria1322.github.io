@@ -205,6 +205,13 @@ canvas{
     margin: 0px 7% 0px 7%;
 }
 
+#About-img-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 90% 50%;
+}
+
 #about-text{
     width: 30%;
     margin: auto auto auto 0px;
@@ -910,6 +917,10 @@ footer p{
         height: 45vh;
         width: 100%;
         margin: 5% 0px 5% 0px;
+    }
+
+    #About-img-container img{
+        object-position: 90% 30%;
     }
 
     #about-text{
