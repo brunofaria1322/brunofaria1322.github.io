@@ -1,3 +1,3 @@
 # brunofaria1322.github.io
 
-a new beginning
+formHandler.php not working while hosted on GitHub pages 
